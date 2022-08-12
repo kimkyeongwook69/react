@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Q1.
+        var nums = [100, 400, 500, 300, 200];
+        let deleteNums = [400, 500];
+        console.log(nums.filter(num => !deleteNums.includes(num)));
+
+        //for 
+        // let newNums = [];
+        // for(let i = 0; i < nums.length; i++) {
+        //     if(nums[i] !== 400 || nums !== 500) {
+        //         newNums.push(nums[i])
+        //     }
+        // }
+        // console.log(newNums);
+
+        // for(let i = 0; i < nums.length; i++) {
+        //     if(nums[i] === 400 || nums[i] === 500) {
+        //         nums.splice(i, 1);
+        //         i--;
+        //     }
+        // }
+        // console.log(nums);
+
+        //filter? --> 결과가 배열로 반환
+        // console.log(nums.filter(num => (num%3) === 3));
+
+        // const filteredArray = nums.filter(num =>(num !==400))
+        //                             .filter(num => (num !== 500));
+        // console.log(filteredArray);
+        //reduce?
+
+
+        //reduce --> *** return!, 초기값 지정(숫자:0, 배열:[], 문자열:'', etc);
+        const resultArray = nums.reduce((accumulator, currentvalue) => {
+           // console.log(accumulator);
+           // console.log(currentvalue);
+           if(currentvalue !== 400)
+           if(currentvalue !== 500)
+           accumulator.push(currentvalue);
+           return accumulator;
+        },[]);
+        resultArray.sort();
+        console.log(resultArray);
+
+
+        // nums.splice(3,2);
+        // // console.log(nums);
+
+        
+        // var arr = [200, 100, 300];
+
+        // arr.removed = arr.splice(2, 0, 10000);
+        
+        // console.log(arr)
+
+
+        // var year = '2022' ;
+        // var month = '08';
+        // var day = '03';
+        // var hour = '11';
+        // var minute ='34';
+        // var second = '27';
+
+        // var result = year.concat("/",month, "/",day, " ",hour,":", minute,":", second);
+        // // console.log(result);
+
+
+        // let planet2 = 1 
+        // switch (planet2) {
+        //     case 1 :
+        //         console.log("수성입니다.")
+        //         break;
+        //     case 2 :
+        //         console.log("금성입니다.");
+        //         break;
+        //     case 3 :
+        //         console.log("지구입니다.");
+        //         break;
+        //     case 4 :
+        //         console.log("화성입니다.");
+        //         break;
+        //     case 5 :
+        //         console.log("목성입니다.");
+        //         break;
+        //     case 6 :
+        //         console.log("토성입니다.");
+        //         break;
+        //     case 7 :
+        //         console.log("천왕성입니다.");
+        //         break;
+        //     case 8 :
+        //         console.log("해왕성입니다.");
+        //         break;
+        //     default:
+        //         // console.log("1 ~ 8 중에 선택해주세요 !!" );
+        // }
+
+
+        // let n = 9
+        // if ( n % 3 == 0) {
+        //     console.log('짝');
+        // } else {
+        //     console.log(n);
+        // }
+
+        //6. split 로꾸꺼 
+ 
+        // 입출력 입력 : 거꾸로
+        // 출력 : 로꾸거 
+        //
+        //  반복문 써서 로꾸꺼 문자열로 받아서 거꾸로 쓰기 
+        // function reverse(str) {
+
+        //     var reverStr = "";
+
+        //     for (var i = str.length -1; i >= 0; i--) {
+        //         reverStr = reverStr + str.charAt(i);
+        //     }
+
+        //     return reverStr;
+        // }
+        // console.log(reverse("거꾸로"))
+        
+        // Q7.
+        // let korean = [수성, 금성, 지구, 화성, 목성 , 토성, 천왕성, 해왕성];
+
+        // const planet = {
+        //     수성 : "Mercury",
+        //     금성 : "Venus",
+        //     지구 : "Earth",
+        //     화성 : "Mars"
+        // }
+
+        // const planetName = prompt("검색하고하 하는 행성의 이름");
+        // alert(planet[planetName]);
+
+
+        // Q8.
+        // const word = "Javascipt"
+        // for(let i = 0; i< word.length-1; i++) {
+        //     console.log(`${word[i] } ${word[i+1]}`);
+        // }
+
+        // // Q9/
+        // function checkUppercase(alpha) {
+        //     if(alpha === alpha.toUpperCase()) {
+        //         console.log("YES");
+        //     }else{
+        //         console.log("NO");
+        //     }
+        // }
+        // checkUppercase('A');
+
+        // 10.
+        // const students = ['강권모','강보라','김경률','김경욱','김민욱','김재선','김현민','박상민','박수용','박주용','배병서','배진경', '손용민','이광석','이동훈','정주현','정혜지','주동석','최정현','홍민향','황동하']
+        // for(let key in students) {
+        //     // console.log(typeof key) //string
+        //     console.log(`번호:${parseInt(key)+1}, 이름: ${students[key]}`);
+        // }
+
+        // students.sort(); // 오름차순
+        // students.reverse(); // 내림차순
+        // console.log(students);
+    
+
+
+        //11.
+        // const longWord = "복잡한 세상 편하게 살자";
+        // console.log(longWord.split(' '));
+        // for(let word of longWord.split(' ')) {
+        //     // console.log(typeof word);
+        //     // console.log(woed[0]);
+        //     // console.log(word.charA6)
+        //     console.log(word.slice(0, 1));
+        // }
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+        
+    </script>
+</body>
+</html>
